@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.cdnfonts.com/css/technology?styles=26651");
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+:root {
+  --glow-color: hsl(12, 100%, 69%);
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Share Tech Mono", monospace;
+  text-decoration: none;
+  list-style: none;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: #212529;
+  color: #fff;
+  margin: 0;
+  height: 100vh;
+  font-family: "Share Tech Mono", monospace;
+}
+
+@media (max-width: 1440px) {
+  .glowing-txt {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .glowing-txt {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .glowing-txt {
+    font-size: 1rem;
+    letter-spacing: 6px;
+  }
+}
+
+@media (max-width: 576px) {
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(135, 47, 31, 0.18);
+  z-index: 1;
+  font-family: "Share Tech Mono", monospace;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  width: 100%;
+}
+
+.nav--logo a{
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(239, 239, 239);
+  font-family: "Share Tech Mono", monospace;
+}
+
+.nav--logo a span {
+  color: #fa3939;
+}
+
+.menu--items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu--items a {
+  display: block;
+  padding: 7px 15px;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: "Share Tech Mono", monospace;
+  transition: 0.2s all ease-in-out;
+  color: rgb(255, 255, 255);
+}
+
+.menu--items a:hover {
+  opacity: 1;
+  color: #9f9f9f;
+}
+
+.menu--icon {
+  display: none;
+}
+
+#menu--toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .menu {
+  transform: scale(1, 1);
+}
+
+@media only screen and (max-width: 950px) {
+  .menu--items {
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px 0 solid rgba(255, 255, 255, 0.18);
+    
+    align-items: start;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+  }
+  .menu--items a {
+    margin-left: 12px;
+  }
+  .menu--items li {
+    margin-bottom: 10px;
+  }
+
+  .menu--icon {
+    display: block;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+  }
+}
