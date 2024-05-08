@@ -144,3 +144,53 @@ nav {
     cursor: pointer;
   }
 }
+
+/* hero section styling */
+
+.hero-text {
+  display: flex;
+  font-family: "Share Tech Mono", monospace;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-top: 50px;
+}
+.hero-text p {
+  font-family: "Share Tech Mono", monospace;
+  text-align: center;
+  font-size: 20px;
+}
+.hero-text h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+.pfp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.pfp img {
+  max-width: 150px;
+  border-radius: 50%;
+}
+
+.heading h1 {
+  font-size: 50px;
+  text-align: center;
+}
+.heading h1 span {
+  color: #fa3939;
+}
+@media (max-width: 768px) {
+  .heading h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-left: 0px;
+  }
+  .hero-text p {
+    font-size: 15px;
+  }
+}

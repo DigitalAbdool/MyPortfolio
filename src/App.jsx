@@ -1,16 +1,22 @@
-import { useState } from 'react'
-import './App.css'
-import Navbar from './components/Navbar'
-import information from './data/information'
+import { useState } from 'react';
+import './App.css';
+import Navbar from './components/Navbar';
+import information from './data/information';
+import Hero from './components/Hero';
+import Heading from "./components/Heading";
 
 function App() {
   
-
   return (
     <>
       <Navbar
       firstName = {information.userData.firstName}
       lastName = {information.userData.lastName}
+      />
+      <Hero
+        img={information.userData.img}
+        description={information.userData.description}
+        title={information.userData.title}
       />
     </>
   )
