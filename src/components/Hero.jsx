@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Typewriter from 'typewriter-effect';
 import socials from "../data/socials";
 import Heading from "./Heading";
-import MyHero from '../assets/react.svg';
+import MyHero from '../assets/Mypic.png';
 
 
 const Hero = (props) =>{
@@ -23,7 +23,7 @@ const Hero = (props) =>{
                 }}
             whileTap ={{
                 scale:  0.8,
-                rotate: 180,
+                rotate: -90,
                 borderRadius: "100%",
             }}
             className = "pfp"
@@ -31,11 +31,11 @@ const Hero = (props) =>{
                 <img src={MyHero} alt="" />
             </motion.div>
             <Heading firstWord="Who" secondWord="AmI?" />
-            <div className="hero--typewriter">
+            <div className="hero-typewriter">
                 <h3>I am</h3>
                 <Typewriter
-                options = {{
-                    strings : [
+                options={{
+                    strings: [
                         "An Frontend Developer",
                         "An IT Enthusiast",
                         "A Wordpress Developer",
@@ -48,15 +48,15 @@ const Hero = (props) =>{
                 />
             </div>
             <div className="hero-text">
-                <p className="hero--desc">{props.description}</p>
+                <p className="hero-desc">{props.description}</p>
             </div>
             <br />
             <br />
-            Contact me on:
-            <div className="hero--socials">
+            <h3>Contact me on:</h3>
+            <div className="hero-socials">
                 {socials.map((social, index) =>(
                     <a key={index} href={social.url}>
-                        <img src={`/social/${socials.icon}`} alt="" />
+                        <img src={`/socials/${social.icon}`} alt="" />
                     </a>
                 ))}
             </div>

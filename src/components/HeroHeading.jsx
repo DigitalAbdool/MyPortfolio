@@ -5,6 +5,7 @@ const HeroHeading = () => {
         "An IT Enthusiast",
         "A Wordpress Developer",
         "A Gradaute",
+        "A Programmer",
     ];
 
     const delayTyping_char = 100;
@@ -18,8 +19,10 @@ const HeroHeading = () => {
         if (charIndex < totype[totypeIndex].length) {
             typedSpan.textContent += totype[totypeIndex].charAt(charIndex);
             charIndex++;
-            setTimeout(eraseText, delayTyping_text);
-        } 
+            setTimeout(typeText, delayTyping_char);
+        } else {
+          setTimeout(eraseText, delayTyping_text);
+        }
     }
 
     function eraseText() {
